@@ -4,29 +4,28 @@
 
 void main(){
     /* D = Dividendo, d = Divisor, q = Quociente, r = Resto */
-	int D, d, q, r;
+	int dividendo, divisor, quociente, resto;
 
 	setlocale(LC_ALL,"Portuguese");
 	printf("Digite o valor do Dividendo: ");
-	scanf("%d",&D);
+	scanf("%d",&dividendo);
 	printf("Digite o valor do Divisor: ");
-	scanf("%d",&d);
-	q = D / d;
-	r = D % d;
-    if (r==0 && D>d)
+	scanf("%d",&divisor);
+	quociente = dividendo / divisor;
+	resto = dividendo % divisor;
+    if (resto==0 && dividendo>divisor)
 	{
-	    printf("O resultado da divis„o È: %d\n",q);
-	    printf("A divis„o È exata\n");
+	    printf("O resultado da divis√£o √©: %d\n",quociente);
+	    printf("A divis√£o √© exata\n");
 	}
-	else if (r>=1 && D>d)
+	else if (resto>=1 && dividendo>divisor)
     {
-        printf("O resultado da divis„o È: %d\n",q);
-        printf("Divis„o n„o exata com resto igual a: %d\n",r);
+        printf("O resultado da divis√£o √©: %d\n",quociente);
+        printf("Divis√£o n√£o exata com resto igual a: %d\n",resto);
     }
-    else if (d>D) /* As vari·veis teriam que ser do tipo float para ser feito uma operaÁ„o em que o divisor È maior que o dividendo */
+    else if (divisor>dividendo) /* As vari√°veis teriam que ser do tipo float para ser feito uma opera√ß√£o em que o divisor √© maior que o dividendo */
     {
-    	printf("OperaÁ„o inv·lida\a\n");
+    	printf("Opera√ß√£o inv√°lida\a\n");
 	}
 	system("pause");
 }
-
